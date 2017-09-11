@@ -1,14 +1,14 @@
 
 ## This function creates a special "matrix" object that can cache its inverse.
 
-makeCacheMatrix <- function(x = vector()){
+makeCacheMatrix <- function(x = matrix()){
         m <- NULL
         set <- function(y){     # set the value of the vector
                 x <<- y
                 m <<- NULL
         }
         
-        get <- function() x		# get the value of the vector
+        get <- function() x		# get the value of the matrix
         setinverse <- function(solve) m <<- solve 	# set the value of the inverse
         getinverse <- function() m 		# get the value of the inverse
         
